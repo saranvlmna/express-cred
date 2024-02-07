@@ -1,0 +1,25 @@
+{
+  "name": "express-server-template",
+  "version": "1.0.0",
+  "description": "direction app",
+  "main": "server.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "nodemon --config nodemon.json",
+    "dev": "nodemon --config nodemon.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saranvlmna/express-server-template.git"
+  },
+  "author": "saranjith_p",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saranvlmna/express-server-template.git/issues"
+  },
+  "homepage": "https://github.com/saranvlmna/express-server-template.git#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
