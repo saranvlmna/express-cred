@@ -1,14 +1,10 @@
 import { ServerService } from "../service/server";
-const serverService = new ServerService()
+const serverService = new ServerService();
 export class ServerController {
-  constructor(
-
-  ) {
-
-  }
+  constructor() {}
 
   async heyServer(req: any, res: any) {
-    const response= await serverService.heyServer()
-    res.send(response)
+    const response = await serverService.heyServer();
+    res.send(response);
   }
 }
