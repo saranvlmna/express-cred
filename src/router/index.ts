@@ -1,4 +1,4 @@
 import { serverRouter } from "./server";
-export= {
+export {
     serverRouter
   };
