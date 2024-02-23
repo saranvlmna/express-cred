@@ -3,4 +3,5 @@ import { AuthController } from "../controller/user";
 export const authRouter = Router();
 let authController = new AuthController();
 
-authRouter.post("/", authController.createUser);
+authRouter.post("/create", authController.createUser);
+authRouter.get("/list", authController.listUser);
