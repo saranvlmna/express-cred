@@ -1,7 +1,7 @@
 import { User } from "../database/connection";
 
 export class AuthService {
-  constructor() { }
+  constructor() {}
 
   async createUser(data: any) {
     console.log(data);
