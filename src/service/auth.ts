@@ -4,7 +4,6 @@ export class AuthService {
   constructor() {}
 
   async createUser(data: any) {
-    console.log(data);
-    await User.create(data);
+   return await User.create(data);
   }
 }

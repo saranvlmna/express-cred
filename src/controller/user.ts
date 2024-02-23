@@ -6,7 +6,6 @@ export class AuthController {
 
   async createUser(req: Request, res: any) {
     try {
-      console.log(req);
       const response = await authService.createUser(req.body);
       res.status(StatusCodes.OK).send({
         response,
