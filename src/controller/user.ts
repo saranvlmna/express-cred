@@ -6,23 +6,23 @@ export class AuthController {
 
   async createUser(req: Request, res: any) {
     try {
-      console.log("data",req.body)
+      console.log("data", req.body);
       const response = await authService.createUser(req.body);
       res.status(StatusCodes.OK).send({
         response,
       });
-    } catch (error:any) {
+    } catch (error: any) {
       res.status(StatusCodes.BAD_GATEWAY).send({
-        message:error.message,
+        message: error.message,
       });
     }
   }
 
   async listUser(req: Request, res: any) {
-    try {                                                                                                                                                
-      console.log("get")
+    try {
+      console.log("get");
       const response = await authService.listUser(req.body);
-      console.log(response)
+      console.log(response);
       res.status(StatusCodes.OK).send({
         response,
       });
@@ -30,6 +30,4 @@ export class AuthController {
       console.log(error);
     }
   }
-
-  
 }
