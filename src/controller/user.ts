@@ -11,14 +11,18 @@ export class AuthController {
       res.status(StatusCodes.OK).send({
         response,
       });
-    } catch (error) {
-      console.log(error);
+    } catch (error:any) {
+      res.status(StatusCodes.BAD_GATEWAY).send({
+        message:error.message,
+      });
     }
   }
 
   async listUser(req: Request, res: any) {
-    try {
+    try {                                                                                                                                                
+      console.log("get")
       const response = await authService.listUser(req.body);
+      console.log(response)
       res.status(StatusCodes.OK).send({
         response,
       });

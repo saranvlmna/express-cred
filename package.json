@@ -1,5 +1,5 @@
 {
-  "name": "express-server-template",
+  "name": "express-cred",
   "version": "1.0.0",
   "description": "direction app",
   "main": "server.ts",
