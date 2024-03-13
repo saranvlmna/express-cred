@@ -30,4 +30,32 @@ export class AuthController {
       console.log(error);
     }
   }
+
+  async editUser(req: Request, res: any) {
+    try {
+      console.log("bdoy", req.body);
+      const response = await authService.editUser(req.body);
+      res.status(StatusCodes.OK).send({
+        response,
+      });
+    } catch (error: any) {
+      res.status(StatusCodes.BAD_GATEWAY).send({
+        message: error.message,
+      });
+    }
+  }
+
+  async deleteUser(req: Request, res: any) {
+    try {
+      console.log("data", req.body);
+      const response = await authService.deleteUser(req.body);
+      res.status(StatusCodes.OK).send({
+        response,
+      });
+    } catch (error: any) {
+      res.status(StatusCodes.BAD_GATEWAY).send({
+        message: error.message,
+      });
+    }
+  }
 }

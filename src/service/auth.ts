@@ -11,4 +11,21 @@ export class AuthService {
   async listUser(data: any) {
     return await User.findAll({ raw: true });
   }
+
+  async editUser(data: any) {
+    if (!data.userId) throw Error("params missing userId");
+    return await User.update(data, {
+      where: {
+        id: data.userId,
+      },
+    });
+  }
+
+  async deleteUser(data: any) {
+    return await User.destroy({
+      where: {
+        id: data.userId,
+      },
+    });
+  }
 }
