@@ -1,5 +1,4 @@
-import { User } from "../database/connection";
-
+const User = require("../../models").User;
 export class AuthService {
   constructor() {}
 
